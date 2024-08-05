@@ -1,0 +1,20 @@
+syntax="proto3";
+
+option go_package="./proto";
+
+package client2_request;
+
+service Client2Request{
+    rpc FetchUser(Id)returns(UserResponse2);
+}
+
+message Id{
+    string id=1;
+};
+
+message UserResponse2{
+    string username=1;
+    string email=2;
+    string password=3;
+}
+
